@@ -18,7 +18,12 @@ def hi():
 @app.route('/user/<username>')
 def show_user_profile(username):
     # show the user profile for that user
-    return 'User %s is here' % username	
+    return 'User %s is here' % username
+
+@app.route('/add/<int:num_a>/<int:num_b>')
+def add(num_a,num_b):
+    # Return sum of num_a and num_b
+    return 'Sum of %d and %d is %d' % (num_a,num_b,num_a + num_b)		
 
 if __name__ == '__main__':
    app.run(debug=True)
