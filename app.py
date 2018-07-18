@@ -7,6 +7,12 @@ def add_func(a,b):
 	"""
 	return a+b
 
+def multiply_func(a,b):
+    """
+    return the product of 2 numbers or the combination of two strings
+    """
+    return a*b
+
 @app.route("/")
 def hello():
     return "Hello World!"
@@ -23,7 +29,9 @@ def show_user_profile(username):
 @app.route('/add/<int:num_a>/<int:num_b>')
 def add(num_a,num_b):
     # Return sum of num_a and num_b
-    return 'Sum of %d and %d is %d' % (num_a,num_b,add_func(num_a,num_b))		
+    return 'Sum of %d and %d is %d' % (num_a,num_b,add_func(num_a,num_b))
+
+
 
 if __name__ == '__main__':
    app.run(debug=True)

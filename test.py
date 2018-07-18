@@ -17,4 +17,10 @@ def test_combine_string():
 	expect = 'ab'
 	assert actual == expect
 
+def test_multiply_number():
+	'''check if f returns the product of 2 numbers'''
+	actual = multiply_func(2,3)
+	expect = 6
+	assert actual == expect
+
 #test_number()
