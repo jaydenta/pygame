@@ -1,7 +1,7 @@
 import pytest
 from app import *
 
-def test_number():
+def test_add_number():
 	'''
 	Check if f returns the sum of 2 number
 	'''
@@ -9,7 +9,7 @@ def test_number():
 	expect = 3
 	assert actual == expect
 
-def test_string():
+def test_combine_string():
 	'''
 	Check if f returns the combination of two strings
 	'''
