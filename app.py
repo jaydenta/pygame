@@ -1,4 +1,6 @@
 from flask import Flask
+from flask import render_template
+
 app = Flask(__name__)
 
 def add_func(a,b):
@@ -14,7 +16,7 @@ def multiply_func(a,b):
     return a*b
 
 @app.route("/")
-def hello():
+def hello_world():
     return "Hello World!"
 
 @app.route("/hi")
@@ -31,7 +33,14 @@ def add(num_a,num_b):
     # Return sum of num_a and num_b
     return 'Sum of %d and %d is %d' % (num_a,num_b,add_func(num_a,num_b))
 
+@app.route('/multiply/<int:num_a>/<int:num_b>')
+def multiply(num_a,num_b):
+    # Return sum of num_a and num_b
+    return 'Product of %d and %d is %d' % (num_a,num_b,multiply_func(num_a,num_b))
 
+@app.route('/pygame/<game_name>')
+def portfolio(game_name):
+    return render_template('index.html',view=game_name)    
 
 if __name__ == '__main__':
    app.run(debug=True)
