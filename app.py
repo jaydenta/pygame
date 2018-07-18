@@ -40,7 +40,11 @@ def multiply(num_a,num_b):
 
 @app.route('/pygame/<game_name>')
 def portfolio(game_name):
-    return render_template('index.html',view=game_name)    
+    return render_template('index.html',a=game_name)
+
+@app.route('/plot')
+def plot():
+    return render_template('plot.html')
 
 if __name__ == '__main__':
    app.run(debug=True)
