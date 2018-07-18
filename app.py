@@ -16,8 +16,8 @@ def multiply_func(a,b):
     return a*b
 
 @app.route("/")
-def hello_world():
-    return "Hello World!"
+def root():
+    return render_template('index.html')
 
 @app.route("/hi")
 def hi():
