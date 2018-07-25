@@ -23,4 +23,18 @@ def test_multiply_number():
 	expect = 6
 	assert actual == expect
 
+def test_add_number_list():
+    """
+	check if function returns the sum of the list of integers
+    """
+    actual = add_number_list([1,2,3])
+    expect = 6
+    assert actual == expect
+def test_add_string_list():
+    """
+   check if function returns the combined string from a list of smaller strings
+    """
+    actual = add_string_list(['Hi ','my love','!'])
+    expect = 'Hi my love!'
+    assert actual == expect
 #test_number()
