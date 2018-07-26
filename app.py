@@ -22,7 +22,7 @@ def add_number_list(l):
     This function should return the sum of all numbers or
     the combination of all the strings
     """
-
+    
     result = 0
     for item in l:
         result = result + item
@@ -35,10 +35,23 @@ def add_string_list(l):
     This function should return the sum of all numbers or
     the combination of all the strings
     """
-    
+
     result = ''
     for item in l:
         result = result + item
+    return result
+
+def multiply_number_list(l):
+    """
+    l is a list variable, should be either a list of number
+    or list of string
+    This function should return the sum of all numbers or
+    the combination of all the strings
+    """
+
+    result = 1
+    for item in l:
+        result = result * item
     return result
 
 @app.route("/")
