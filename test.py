@@ -48,4 +48,14 @@ def test_multiply_number_string():
 	expect = 384
 	assert actual == expect
 
-#test_number()
+def test_hashtag_rectangle():
+	actual = hashtag_rectangle(3)
+	print(actual)
+
+def test_hashtag_triable():
+	actual = hashtag_triangle(3)
+	print(actual)
+
+
+
+actual = hashtag_rectangle(3) 

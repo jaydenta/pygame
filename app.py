@@ -54,6 +54,22 @@ def multiply_number_list(l):
         result = result * item
     return result
 
+def hashtag_rectangle(n):
+    s = ''
+    for i in range(n):
+        s = s + n * '#' + '\n' 
+        #print((i+1) * '#')
+        #print(n *'#')
+    return(s)
+
+def hashtag_triangle(n):
+    s = ''
+    for i in range(n):
+        s = s + (i+1) * '#' + '\n' 
+        #print((i+1) * '#')
+        #print(n *'#')
+    return(s)
+
 @app.route("/")
 def root():
     return render_template('index.html')
@@ -84,6 +100,14 @@ def portfolio(game_name):
 @app.route('/plot')
 def plot():
     return render_template('plot.html')
+
+@app.route("/hashtag_rectangle/<int:number>")
+def show_hashtag_rectangle(number):
+    return hashtag_rectangle(number)
+
+@app.route("/hashtag_triangle/<int:number>")
+def show_hashtag_triangle(number):
+    return hashtag_triangle(number)
 
 if __name__ == '__main__':
    app.run(debug=True)
